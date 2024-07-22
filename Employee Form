@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Declares the document type and version of XHTML -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- Root element of the XHTML document with XML namespace and language specified as English -->
+<head>
+    <!-- Head section containing meta-information about the document -->
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <title>Employee Details Form</title>
+    <!-- Sets the title of the webpage that appears in the browser tab -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Link to Bootstrap CSS -->
+    <style>
+        /* Internal CSS for additional styling */
+        body {
+            background-color: #f8f9fa;
+            /* Light background color */
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            /* Dark color for the heading */
+        }
+    </style>
+</head>
+<body>
+    <!-- The body contains the visible content of the webpage -->
+    <div class="container form-container">
+        <!-- Bootstrap container class for centering the form -->
+        <h1>Employee Details Form</h1>
+        <!-- Main heading of the page -->
+
+        <form action="/submit_employee_details" method="post">
+            <!-- Defines a form that sends data to the specified URL using the POST method -->
+            <div class="form-group">
+                <!-- Bootstrap form group for consistent styling -->
+                <label for="employee_id">Employee ID:</label>
+                <!-- Label for the employee ID input field -->
+                <input type="text" class="form-control" id="employee_id" name="employee_id" required="required" />
+                <!-- Input field for the employee ID, required makes the field mandatory -->
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <!-- Label for the name input field -->
+                <input type="text" class="form-control" id="name" name="name" required="required" />
+                <!-- Input field for the name, required makes the field mandatory -->
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <!-- Label for the department input field -->
+                <input type="text" class="form-control" id="department" name="department" required="required" />
+                <!-- Input field for the department, required makes the field mandatory -->
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <!-- Label for the position input field -->
+                <input type="text" class="form-control" id="position" name="position" required="required" />
+                <!-- Input field for the position, required makes the field mandatory -->
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <!-- Label for the gender dropdown menu -->
+                <select class="form-control" id="gender" name="gender">
+                    <!-- Dropdown menu for gender selection -->
+                    <option value="male">Male</option>
+                    <!-- Option for Male -->
+                    <option value="female">Female</option>
+                    <!-- Option for Female -->
+                    <option value="other">Other</option>
+                    <!-- Option for Other -->
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <!-- Submit button with Bootstrap styling -->
+        </form>
+    </div>
+</body>
+</html>
